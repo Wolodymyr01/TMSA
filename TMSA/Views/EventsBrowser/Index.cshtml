@@ -1,0 +1,7 @@
+﻿@model TMSA.Models.EventsBrowserViewModel
+<h2>@Model.Event.Name</h2>
+<p>@Model.Event.Description</p>
+@foreach (var item in Model.Bookings)
+{
+    <p>The seat @item.SeatNumber is sold to @item.Client?.FirstName</p>
+}
